@@ -3,6 +3,8 @@ layout: post
 title: Tout savoir sur la symbiose industrielle
 ---
 
+Qu'est ce que la symbiose industrielle ?
+
 # Symbiose industrielle : Redéfinir les Relations Entre les Entreprises
 
 La symbiose industrielle est une approche innovante qui vise à réduire les déchets industriels en créant des synergies entre les entreprises. Cette approche peut aider les entreprises à économiser de l'argent, à réduire leur empreinte carbone et à renforcer leur image de marque en adoptant des pratiques durables. Dans cet article, nous allons explorer ce que la symbiose industrielle implique, comment elle fonctionne, ses avantages, ses défis et ses exemples réussis.
