@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tout savoir sur la symbiose industrielle
-h1: Symbiose industrielle : Redéfinir les Relations Entre les Entreprises
+h1: "Symbiose industrielle : Redéfinir les Relations Entre les Entreprises"
 ---
 
 Qu'est ce que la symbiose industrielle ?
