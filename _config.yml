@@ -84,3 +84,8 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  
+  collections:
+  tags:
+    output: true
+
