@@ -2,6 +2,9 @@
 layout: post
 title: Tout savoir sur la symbiose industrielle
 h1: "Symbiose industrielle : Redéfinir les Relations Entre les Entreprises"
+date: 2023-04-27
+tags:
+  - tagAleatoire
 ---
 
 Qu'est ce que la symbiose industrielle ?
