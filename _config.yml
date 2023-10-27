@@ -85,7 +85,7 @@ exclude:
   - README.md
   - CNAME
   
-  collections:
+collections:
   tags:
     output: true
 
