@@ -11,6 +11,8 @@ layout: default
     <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
+
+  <h2>Articles liés :</h2>
 <div>
   {% for tag in page.tags %}
     {% for post in site.tags[tag] %}
