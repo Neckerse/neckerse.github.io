@@ -8,10 +8,18 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
-  <div class="date">
+    <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
-
+<div class="posts">
+  {% for post in site.tags[page.tag] %}
+    <article class="post">
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lire la suite</a>
+    </article>
+  {% endfor %}
   {% include disqus.html %}
 </article>
