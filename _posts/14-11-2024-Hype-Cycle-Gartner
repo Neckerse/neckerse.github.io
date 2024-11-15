@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.h1 }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+    <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  <h2>Visualisation : Cycle du Battage Médiatique</h2>
+  <div id="hype-cycle" style="width: 100%; max-width: 800px; height: 600px; margin: auto;"></div>
+
+  <script src="https://cdn.plot.ly/plotly-2.24.2.min.js"></script>
+  <script>
+      var x = [0, 2, 4, 6, 8, 10];
+      var y = [0, 3, 1.5, 2, 1, 1];
+      var annotations = [
+          {x: 1, y: 1.5, text: "Déclencheur Technologique", showarrow: true, arrowhead: 7},
+          {x: 3, y: 3, text: "Pic des Attentes Exagérées", showarrow: true, arrowhead: 7},
+          {x: 5, y: 1.5, text: "Creux de la Désillusion", showarrow: true, arrowhead: 7},
+          {x: 7, y: 2, text: "Pente de l'Éclaircissement", showarrow: true, arrowhead: 7},
+          {x: 9, y: 1, text: "Plateau de Productivité", showarrow: true, arrowhead: 7}
+      ];
+
+      var trace = {
+          x: x,
+          y: y,
+          mode: "lines+markers",
+          line: {shape: "spline", color: "blue"},
+          marker: {size: 8, color: "blue"},
+          name: "Hype Cycle"
+      };
+
+      var layout = {
+          title: "Cycle du Battage Médiatique (Hype Cycle)",
+          xaxis: {title: "Temps", zeroline: false},
+          yaxis: {title: "Niveau d’attente", zeroline: false},
+          annotations: annotations,
+          shapes: [
+              {type: "rect", x0: 0, x1: 2, y0: 0, y1: 3, fillcolor: "#ADD8E6", opacity: 0.3, line: {width: 0}},
+              {type: "rect", x0: 2, x1: 4, y0: 0, y1: 3, fillcolor: "#87CEEB", opacity: 0.3, line: {width: 0}},
+              {type: "rect", x0: 4, x1: 6, y0: 0, y1: 3, fillcolor: "#4682B4", opacity: 0.3, line: {width: 0}},
+              {type: "rect", x0: 6, x1: 8, y0: 0, y1: 3, fillcolor: "#5F9EA0", opacity: 0.3, line: {width: 0}},
+              {type: "rect", x0: 8, x1: 10, y0: 0, y1: 3, fillcolor: "#2F4F4F", opacity: 0.3, line: {width: 0}}
+          ]
+      };
+
+      Plotly.newPlot("hype-cycle", [trace], layout);
+  </script>
+
+  <h2>Articles liés :</h2>
+  <div>
+    {% for tag in page.tags %}
+      {% for post in site.tags[tag] %}
+        <article class="post">
+          <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lire la suite</a>
+        </article>
+      {% endfor %}
+    {% endfor %}
+  </div>
+  {% include disqus.html %}
+</article>
